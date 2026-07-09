@@ -536,32 +536,13 @@
     // ---------- Control del tocadiscos ----------
     playToggle.addEventListener('click', () => {
       if(bgAudio.paused){
-        bgAudio.dataset.userPaused = '';
         bgAudio.play();
+        turntable.classList.add('playing');
+        playToggle.innerHTML = '&#10074;&#10074;';
       } else {
-        bgAudio.dataset.userPaused = 'true';
         bgAudio.pause();
-      }
-    });
-
-    // El disco y el icono siempre reflejan el estado real del audio,
-    // así la música se mantiene sonando en bucle hasta que se pausa a mano.
-    bgAudio.addEventListener('play', () => {
-      bgAudio.dataset.started = 'true';
-      turntable.classList.add('playing');
-      playToggle.innerHTML = '&#10074;&#10074;';
-    });
-    bgAudio.addEventListener('pause', () => {
-      turntable.classList.remove('playing');
-      playToggle.innerHTML = '&#9658;';
-    });
-
-    // Si el navegador pausa el audio al cambiar de pestaña, lo retoma
-    // automáticamente en cuanto la pestaña vuelve a estar visible
-    // (a menos que el usuario lo haya pausado él mismo a propósito).
-    document.addEventListener('visibilitychange', () => {
-      if(document.visibilityState === 'visible' && bgAudio.dataset.started === 'true' && bgAudio.paused && !bgAudio.dataset.userPaused){
-        bgAudio.play().catch(() => {});
+        turntable.classList.remove('playing');
+        playToggle.innerHTML = '&#9658;';
       }
     });
 
