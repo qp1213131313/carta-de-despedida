@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Para ti</title>
+<title>Hasta siempre</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=Caveat:wght@500;700&display=swap" rel="stylesheet">
@@ -61,7 +61,6 @@
       linear-gradient(180deg, rgba(18,14,26,0.55) 0%, rgba(18,14,26,0.25) 30%, rgba(18,14,26,0.55) 100%);
   }
 
-  /* imagen de respaldo si aún no hay fotos */
   .slide.placeholder{
     background:
       radial-gradient(circle at 30% 20%, #3a2c4d 0%, transparent 55%),
@@ -383,7 +382,7 @@
 
   .letter-content{
     clear:both;
-    font-size:18px;
+    font-size:17.5px;
     line-height:1.75;
   }
   .letter-date{
@@ -406,6 +405,52 @@
     color:#4a2f52;
   }
 
+  /* ---------- MENCIONES HONORÍFICAS ---------- */
+  .honors{
+    margin-top:36px;
+    padding-top:30px;
+    border-top:1px solid rgba(44,33,48,0.18);
+    text-align:center;
+  }
+  .honors-title{
+    font-family:'Cormorant Garamond', serif;
+    font-weight:600;
+    font-size:22px;
+    letter-spacing:.05em;
+    color:#3a2440;
+    margin-bottom:20px;
+  }
+  .honors-grid{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:16px 22px;
+  }
+  .honor-name{
+    position:relative;
+    font-family:'Cormorant Garamond', serif;
+    font-weight:700;
+    font-size:22px;
+    letter-spacing:.03em;
+    background:linear-gradient(90deg, #a3742a, #f0c979, #fff3d6, #f0c979, #a3742a);
+    background-size:220% auto;
+    -webkit-background-clip:text;
+    background-clip:text;
+    -webkit-text-fill-color:transparent;
+    animation:shine 3.2s linear infinite;
+    padding:4px 2px;
+  }
+  @keyframes shine{
+    0%{background-position:0% 50%;}
+    100%{background-position:220% 50%;}
+  }
+  .honors-note{
+    margin-top:22px;
+    font-family:'Caveat', cursive;
+    font-size:19px;
+    color:#6b5a72;
+  }
+
   /* ---------- RESPONSIVE ---------- */
   @media (max-width:640px){
     .vinyl-player{left:16px; bottom:16px;}
@@ -413,7 +458,8 @@
     .track-caption{display:none;}
     .letter-paper{padding:40px 26px 32px;}
     .letter-salutation{font-size:26px;}
-    .letter-content{font-size:16.5px;}
+    .letter-content{font-size:16px;}
+    .honor-name{font-size:19px;}
   }
 </style>
 </head>
@@ -444,8 +490,8 @@
   <!-- Escena principal -->
   <main class="main-scene" id="mainScene">
     <div class="content">
-      <p class="eyebrow">para ti</p>
-      <h1 class="greeting">Gracias por<br><em>estar conmigo</em></h1>
+      <p class="eyebrow">una despedida</p>
+      <h1 class="greeting">Ha llegado<br><em>el momento</em></h1>
       <button class="btn-read" id="readLetterBtn">Leer la carta</button>
     </div>
   </main>
@@ -470,14 +516,47 @@
     <div class="letter-paper">
       <button class="close-letter" id="closeLetter" aria-label="Cerrar carta">&times;</button>
       <div class="letter-content">
-        <p class="letter-date">Hoy, como cualquier otro día en que pienso en ti.</p>
-        <p class="letter-salutation">Querida tú,</p>
-        <p>Hay cosas que uno debería decir más a menudo y casi nunca dice. Esta es una de ellas: gracias. Gracias por estar aquí, por quedarte incluso en los días en que no fue fácil, por elegirme una y otra vez sin que nadie te lo pidiera.</p>
-        <p>No sé si te lo digo lo suficiente, pero cada momento contigo se me queda guardado en algún lugar, como esas canciones que se ponen sin querer y de repente te devuelven a un instante exacto. Tú eres eso para mí: una canción que no se gasta por mucho que la repita.</p>
-        <p>Quiero que sepas que no doy por sentado nada de lo que compartimos. Ni las conversaciones que se alargan hasta tarde, ni los silencios cómodos, ni las fotos que fuimos guardando sin pensar que un día formarían este pequeño rincón que estás viendo ahora.</p>
-        <p>Si alguna vez dudas de lo que significas, vuelve aquí. Dale al disco, mira las fotos, léeme otra vez. Aquí vas a encontrar siempre lo mismo: a alguien agradecido de tenerte cerca.</p>
-        <p>Gracias por estar conmigo. De verdad.</p>
-        <p class="letter-signature">Con todo mi cariño.</p>
+        <p class="letter-date">Hoy, después de mucho tiempo reflexionándolo.</p>
+        <p class="letter-salutation">Después de mucho tiempo reflexionándolo,</p>
+        <p>He tomado la decisión de abandonar el staff.</p>
+        <p>Desde abril he intentado aportar mi granito de arena, ayudar en todo lo posible y trabajar con la intención de mejorar el servidor. Sin embargo, con el paso de los meses he llegado a la conclusión de que mis aportaciones no son valoradas y que, en muchas ocasiones, parece que el problema es simplemente ser quien soy.</p>
+        <p>Siempre que he querido abrir un debate sobre aspectos que considero mejorables, la reacción ha sido interpretarlo como una conspiración o un ataque, en lugar de verlo como una oportunidad para intercambiar ideas y encontrar soluciones. Un equipo debería poder debatir con respeto, escuchar opiniones distintas y construir mejoras entre todos, no evitar cualquier conversación incómoda.</p>
+        <p>Desde que llegué, he sentido una falta de respeto constante hacia mi persona. No es una percepción únicamente mía; muchas personas de mi entorno lo han visto e incluso me han preguntado en varias ocasiones por qué seguía aquí. La respuesta siempre fue la misma: porque llegué con la ilusión de formar parte de una comunidad donde las ideas pudieran debatirse libremente y donde las decisiones se tomaran pensando en el bienestar del servidor, no en los intereses de unos pocos.</p>
+        <p>Si echamos la vista atrás, soy el penúltimo miembro del equipo original de administración y moderación del 14 de abril en marcharse, solo por detrás de Alitacule. La mayoría de quienes formaban parte de aquel equipo acabaron abandonando por motivos muy similares. Yo decidí aguantar, esperando que las cosas cambiaran, pero ese momento nunca llegó.</p>
+        <p>Hay situaciones que nunca he conseguido entender. ¿Por qué, al asumir el cargo de manager, una de las primeras instrucciones que recibí fue limitar o censurar la expresión de mis propias ideas dentro del staff? ¿Por qué debatir ciertos temas estaba mal visto? Si expresar una opinión o plantear una crítica constructiva se considera un problema, entonces existe un problema mucho más profundo dentro del funcionamiento del equipo.</p>
+        <p>Siempre he intentado preocuparme por mis compañeros. En varias ocasiones defendí públicamente el trabajo de otros miembros del staff cuando consideraba que no se estaba valorando su esfuerzo o que no estaban siendo tratados con el respeto que merecían. Con el tiempo entendí que incluso eso parecía estar mal visto. En lugar de fomentar el compañerismo, la sensación era que solo se esperaba obediencia jerárquica y silencio para evitar cualquier discrepancia.</p>
+        <p>Me marcho con muchos recuerdos. Desgraciadamente, la mayoría no son buenos. Aun así, también me llevo a personas que sí han merecido la pena y con las que he disfrutado compartiendo esta etapa.</p>
+        <p>No guardo rencor a nadie y deseo de corazón que el servidor consiga mejorar en aquellos aspectos que, desde mi punto de vista, llevan tanto tiempo lastrándolo. Ojalá algún día el compañerismo, el respeto y el diálogo sean la norma y no la excepción.</p>
+        <p>Gracias a todos los que me apoyaron, confiaron en mí y compartieron este camino conmigo.</p>
+        <p>Les deseo lo mejor. Ha llegado el momento de cerrar esta etapa.</p>
+        <p class="letter-signature">Hasta siempre.</p>
+
+        <div class="honors">
+          <p class="honors-title">Menciones honoríficas</p>
+          <div class="honors-grid">
+            <span class="honor-name">@juan</span>
+            <span class="honor-name">@pepe</span>
+            <span class="honor-name">@juan</span>
+            <span class="honor-name">@pepe</span>
+            <span class="honor-name">@juan</span>
+            <span class="honor-name">@pepe</span>
+            <span class="honor-name">@juan</span>
+            <span class="honor-name">@pepe</span>
+            <span class="honor-name">@juan</span>
+            <span class="honor-name">@pepe</span>
+            <span class="honor-name">@juan</span>
+            <span class="honor-name">@pepe</span>
+            <span class="honor-name">@juan</span>
+            <span class="honor-name">@pepe</span>
+            <span class="honor-name">@juan</span>
+            <span class="honor-name">@pepe</span>
+            <span class="honor-name">@juan</span>
+            <span class="honor-name">@pepe</span>
+            <span class="honor-name">@juan</span>
+            <span class="honor-name">@pepe</span>
+          </div>
+          <p class="honors-note">gracias por estar ahí, juan y pepe.</p>
+        </div>
       </div>
     </div>
   </div>
