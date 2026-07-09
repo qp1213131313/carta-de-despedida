@@ -428,22 +428,48 @@
   }
   .honor-name{
     position:relative;
+    display:inline-block;
     font-family:'Cormorant Garamond', serif;
     font-weight:700;
-    font-size:22px;
+    font-size:21px;
     letter-spacing:.03em;
-    background:linear-gradient(90deg, #a3742a, #f0c979, #fff3d6, #f0c979, #a3742a);
-    background-size:220% auto;
-    -webkit-background-clip:text;
-    background-clip:text;
-    -webkit-text-fill-color:transparent;
-    animation:shine 3.2s linear infinite;
-    padding:4px 2px;
+    color:#fff8ea;
+    padding:8px 18px;
+    border-radius:999px;
+    background:var(--hc, #a3742a);
+    box-shadow:
+      0 0 0 1px rgba(255,255,255,.25) inset,
+      0 6px 16px -2px var(--hc, #a3742a),
+      0 0 26px -4px var(--hc, #a3742a);
+    text-shadow:0 1px 3px rgba(0,0,0,.35);
+    animation:glow-pulse 2.6s ease-in-out infinite;
   }
-  @keyframes shine{
-    0%{background-position:0% 50%;}
-    100%{background-position:220% 50%;}
+  @keyframes glow-pulse{
+    0%,100%{
+      box-shadow:
+        0 0 0 1px rgba(255,255,255,.25) inset,
+        0 6px 16px -2px var(--hc, #a3742a),
+        0 0 18px -4px var(--hc, #a3742a);
+      transform:translateY(0);
+    }
+    50%{
+      box-shadow:
+        0 0 0 1px rgba(255,255,255,.35) inset,
+        0 8px 22px -2px var(--hc, #a3742a),
+        0 0 34px -2px var(--hc, #a3742a);
+      transform:translateY(-2px);
+    }
   }
+  .honor-name.c1{ --hc:#c9482f; }
+  .honor-name.c2{ --hc:#2f8fc9; }
+  .honor-name.c3{ --hc:#3fa661; }
+  .honor-name.c4{ --hc:#a349c9; }
+  .honor-name.c5{ --hc:#d9a94f; }
+  .honor-name.c6{ --hc:#c93f8b; }
+  .honor-name.c7{ --hc:#3f97a6; }
+  .honor-name.c8{ --hc:#c97a2f; }
+  .honor-name.c9{ --hc:#5a6bd6; }
+  .honor-name.c10{ --hc:#4fb894; }
   .honors-note{
     margin-top:22px;
     font-family:'Caveat', cursive;
@@ -534,26 +560,26 @@
         <div class="honors">
           <p class="honors-title">Menciones honoríficas</p>
           <div class="honors-grid">
-            <span class="honor-name">@juan</span>
-            <span class="honor-name">@pepe</span>
-            <span class="honor-name">@juan</span>
-            <span class="honor-name">@pepe</span>
-            <span class="honor-name">@juan</span>
-            <span class="honor-name">@pepe</span>
-            <span class="honor-name">@juan</span>
-            <span class="honor-name">@pepe</span>
-            <span class="honor-name">@juan</span>
-            <span class="honor-name">@pepe</span>
-            <span class="honor-name">@juan</span>
-            <span class="honor-name">@pepe</span>
-            <span class="honor-name">@juan</span>
-            <span class="honor-name">@pepe</span>
-            <span class="honor-name">@juan</span>
-            <span class="honor-name">@pepe</span>
-            <span class="honor-name">@juan</span>
-            <span class="honor-name">@pepe</span>
-            <span class="honor-name">@juan</span>
-            <span class="honor-name">@pepe</span>
+            <span class="honor-name c1">@juan</span>
+            <span class="honor-name c2">@pepe</span>
+            <span class="honor-name c3">@juan</span>
+            <span class="honor-name c4">@pepe</span>
+            <span class="honor-name c5">@juan</span>
+            <span class="honor-name c6">@pepe</span>
+            <span class="honor-name c7">@juan</span>
+            <span class="honor-name c8">@pepe</span>
+            <span class="honor-name c9">@juan</span>
+            <span class="honor-name c10">@pepe</span>
+            <span class="honor-name c2">@juan</span>
+            <span class="honor-name c1">@pepe</span>
+            <span class="honor-name c4">@juan</span>
+            <span class="honor-name c3">@pepe</span>
+            <span class="honor-name c6">@juan</span>
+            <span class="honor-name c5">@pepe</span>
+            <span class="honor-name c8">@juan</span>
+            <span class="honor-name c7">@pepe</span>
+            <span class="honor-name c10">@juan</span>
+            <span class="honor-name c9">@pepe</span>
           </div>
           <p class="honors-note">gracias por estar ahí, juan y pepe.</p>
         </div>
