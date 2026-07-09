@@ -349,7 +349,7 @@
 
   .letter-paper{
     position:relative;
-    max-width:560px; width:100%;
+    max-width:640px; width:100%;
     max-height:82vh;
     overflow-y:auto;
     background:
@@ -424,7 +424,21 @@
     display:flex;
     flex-wrap:wrap;
     justify-content:center;
-    gap:16px 22px;
+    gap:22px 20px;
+  }
+  .honor-item{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    max-width:175px;
+  }
+  .honor-comment{
+    margin-top:9px;
+    font-family:'Caveat', cursive;
+    font-size:15.5px;
+    line-height:1.25;
+    color:#5a4a63;
+    text-align:center;
   }
   .honor-name{
     position:relative;
@@ -560,26 +574,18 @@
         <div class="honors">
           <p class="honors-title">Menciones honoríficas</p>
           <div class="honors-grid">
-            <span class="honor-name c1">@juan</span>
-            <span class="honor-name c2">@pepe</span>
-            <span class="honor-name c3">@juan</span>
-            <span class="honor-name c4">@pepe</span>
-            <span class="honor-name c5">@juan</span>
-            <span class="honor-name c6">@pepe</span>
-            <span class="honor-name c7">@juan</span>
-            <span class="honor-name c8">@pepe</span>
-            <span class="honor-name c9">@juan</span>
-            <span class="honor-name c10">@pepe</span>
-            <span class="honor-name c2">@juan</span>
-            <span class="honor-name c1">@pepe</span>
-            <span class="honor-name c4">@juan</span>
-            <span class="honor-name c3">@pepe</span>
-            <span class="honor-name c6">@juan</span>
-            <span class="honor-name c5">@pepe</span>
-            <span class="honor-name c8">@juan</span>
-            <span class="honor-name c7">@pepe</span>
-            <span class="honor-name c10">@juan</span>
-            <span class="honor-name c9">@pepe</span>
+            <div class="honor-item"><span class="honor-name c1">izan</span><p class="honor-comment">por hacerme reír varias veces y disfrutar de los momentos moderando.</p></div>
+            <div class="honor-item"><span class="honor-name c2">antu</span><p class="honor-comment">por ser un buen compañero y siempre intentar ayudarme a hacer cosas, sigo en contacto con él.</p></div>
+            <div class="honor-item"><span class="honor-name c3">pala</span><p class="honor-comment">es uno de los staffs que más valoro.</p></div>
+            <div class="honor-item"><span class="honor-name c4">zelo</span><p class="honor-comment">sin duda el más paciente y más majo de todos, siempre intenta ayudar con lo que tiene aunque esté ocupado.</p></div>
+            <div class="honor-item"><span class="honor-name c5">jimmy</span><p class="honor-comment">un buen amigo.</p></div>
+            <div class="honor-item"><span class="honor-name c6">blay</span><p class="honor-comment">disfrutaba de los buenos momentos con él.</p></div>
+            <div class="honor-item"><span class="honor-name c7">porras</span><p class="honor-comment">uno de los más majos que he conocido.</p></div>
+            <div class="honor-item"><span class="honor-name c8">toni</span><p class="honor-comment">aunque nos llevábamos mal al principio, me acabó cayendo bastante bien.</p></div>
+            <div class="honor-item"><span class="honor-name c9">scoot</span><p class="honor-comment">se fue muy pronto pero sigo siendo muy buen amigo con él.</p></div>
+            <div class="honor-item"><span class="honor-name c10">lucas/edu</span><p class="honor-comment">otro que era muy majo y buen compañero.</p></div>
+            <div class="honor-item"><span class="honor-name c2">naboh</span><p class="honor-comment">otro bastante majo que hacía disfrutar de las horas de moderación.</p></div>
+            <div class="honor-item"><span class="honor-name c5">max</span><p class="honor-comment">buen compañero, me gustaría poder haber compartido más experiencias con él.</p></div>
           </div>
           <p class="honors-note">gracias por estar ahí, juan y pepe.</p>
         </div>
